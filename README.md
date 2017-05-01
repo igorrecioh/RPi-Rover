@@ -1,5 +1,5 @@
 # RPi-Rover
-This repositary includes the necessary code to build a Rover with a Raspberry Pi 3 and a chassis with 4 motors controlled by a L298N driver. You will be able to control the Rover via Terminal by using caracters to move the robot.
+This repositary includes the necessary code to build a Rover with a Raspberry Pi 3 and a chassis with 4 motors controlled by a L298N driver. You will be able to control the Rover via Terminal using caracters to move the robot.
 
 # Parts: (Images will be provided soon!)
 - Chassis
