@@ -18,7 +18,7 @@ finally:
 	termios.tcsetattr(fd, termios.TCSADRAIN, old_settings)
 return ch
 
-# Motor PINs - Por definir -
+# Definicion de pines para motores - Por asignar -
 MOTOR1A = ?? #izquierda
 MOTOR1B = ?? 
 MOTOR2A = ?? #derecha
@@ -27,7 +27,7 @@ MOTOR2B = ??
 #Frecuencia del PWM
 PWM_FREQ = 50 #50hz
 
-#
+#Modo de pineado
 GPIO.setmode(GPIO.BCM)
 
 #Ciclo de trabajo del PWM (maximo 100)
@@ -96,13 +96,12 @@ while True:
 	#Siguiente caracter
 	ch = getch()
 
-	# q = salir de la app
+	# si el caracter es q -> salir de la app
 	if (ch == 'q') :
 		break
-
+	# si el caracter esta en direction, asignar esa direccion a la actual
 	elif (ch in direction.keys()) :
 		current_direction = direction[ch]
-		print "Direccion "+str(current_direction[0])+str(current_direction[1])+"\n"
 
 #Parar y limpiar PWM
 pin1A.stop()
